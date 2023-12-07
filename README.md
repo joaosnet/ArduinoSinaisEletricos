@@ -12,6 +12,19 @@
 
 ## ☕ Usando o protótipo em python do Arduino Sinais Eletricos
 
+## 💻 Pré-requisitos
+
+Antes de começar, verifique se você atendeu aos seguintes requisitos:
+
+- Você instalou a versão mais recente do Microchip Studio
+- Você tem instalado o Proteus 8.7 SP3 ou um microcontrolador ATmega328p
+- ter baixado o projeto do GitHub e entre na pasta do projeto
+```bash
+cd caminho/para/a/pasta/do/projeto
+```
+
+Obs . : para executar o projeto com Proteus 8.7 SP3 é necessário ter um virtualizador de Porta Serial como o [com0com](https://com0com.sourceforge.net/)
+
 ### No windows
 1. Instale o [anaconda](https://docs.anaconda.com/free/anaconda/install/windows.html)
 2. Crie um ambiente virtual
