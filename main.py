@@ -8,7 +8,7 @@ except ModuleNotFoundError:
 import time
 
 # Configuração da placa Arduino
-board = Arduino('COM1')  # Substitua 'COMX' pela porta do seu Arduino
+board = Arduino('COM2')  # Substitua 'COMX' pela porta do seu Arduino
 
 # Configuração dos pinos para corrente e tensão
 pino_corrente = board.get_pin('a:0:i')  # Pino analógico A0 para corrente
