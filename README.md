@@ -1,14 +1,25 @@
 # ArduinoSinaisEletricos - ATmega328
 
-![GitHub repo size](https://img.shields.io/github/repo-size/joaosnet/ButtonControlledCounter_ATmega328?style=for-the-badge)
-![GitHub language count](https://img.shields.io/github/languages/count/joaosnet/ButtonControlledCounter_ATmega328?style=for-the-badge)
-![GitHub forks](https://img.shields.io/github/forks/joaosnet/ButtonControlledCounter_ATmega328?style=for-the-badge)
-![Bitbucket open issues](https://img.shields.io/bitbucket/issues/joaosnet/ButtonControlledCounter_ATmega328?style=for-the-badge)
-![Bitbucket open pull requests](https://img.shields.io/bitbucket/pr-raw/joaosnet/ButtonControlledCounter_ATmega328?style=for-the-badge)
+![GitHub repo size](https://img.shields.io/github/repo-size/joaosnet/ArduinoSinaisEletricos?style=for-the-badge)
+![GitHub language count](https://img.shields.io/github/languages/count/joaosnet/ArduinoSinaisEletricos?style=for-the-badge)
+![GitHub forks](https://img.shields.io/github/forks/joaosnet/ArduinoSinaisEletricos?style=for-the-badge)
+![Bitbucket open issues](https://img.shields.io/bitbucket/issues/joaosnet/ArduinoSinaisEletricos?style=for-the-badge)
+![Bitbucket open pull requests](https://img.shields.io/bitbucket/pr-raw/joaosnet/ArduinoSinaisEletricos?style=for-the-badge)
 
 <img src="screenshots\ArduinoSinaisEletricos.bmp" alt="Projeto A4">
 
- > Projeto de Aquisição e Análise de Sinais Elétricos com Arduino  Este repositório contém o código e a documentação para um projeto realizado no Laboratório de Processamento de Sinais (LaPS). O objetivo é realizar a aquisição e análise de sinais de corrente e tensão em um circuito elétrico, utilizando a plataforma Arduino. O projeto abrange a implementação de um sistema de aquisição, incluindo a definição da taxa de amostragem, resolução e a análise da qualidade de energia em diferentes condições operacionais.  🔧 Tecnologias: Arduino, Python, Processamento de Sinais 📊 Disciplina: Processamento de Sinais (PDS) 📆 Ano: 2023/4  Entrega final composta por uma apresentação em PDF justificada, contendo simulações e/ou fundamentos teóricos, e o código Arduino desenvolvido.  # Sobre o Projeto O projeto visa fornecer uma base para análise de qualidade de energia, permitindo avaliações objetivas em situações simuladas de surtos na rede elétrica. 
+ > Projeto de Aquisição e Análise de Sinais Elétricos com Arduino  Este repositório contém o código e a documentação para um projeto realizado no Laboratório de Processamento de Sinais (LaPS). O objetivo é realizar a aquisição e análise de sinais de corrente e tensão em um circuito elétrico, utilizando a plataforma Arduino. O projeto abrange a implementação de um sistema de aquisição, incluindo a definição da taxa de amostragem, resolução e a análise da qualidade de energia em diferentes condições operacionais.  
+
+ 🔧 Tecnologias: Arduino, Python, Processamento de Sinais 
+
+ 📊 Disciplina: Processamento de Sinais (PDS) 
+
+ 📆 Ano: 2023/4  
+
+ Entrega final composta por uma apresentação em PDF justificada, contendo simulações e/ou fundamentos teóricos, e o código Arduino desenvolvido.
+
+ # Sobre o Projeto 
+ O projeto visa fornecer uma base para análise de qualidade de energia, permitindo avaliações objetivas em situações simuladas de surtos na rede elétrica. 
 
 ## ☕ Usando o protótipo em python do Arduino Sinais Eletricos
 
