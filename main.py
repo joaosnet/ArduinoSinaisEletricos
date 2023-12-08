@@ -17,7 +17,7 @@ com2.timeout = 1
 taxa_amostragem = 1000  # 1 kHz
 
 # Tempo de espera para a estabilização do Arduino
-# time.sleep(2)
+time.sleep(2)
 
 
 df = pd.DataFrame()
