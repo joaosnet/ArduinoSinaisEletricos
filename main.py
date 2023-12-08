@@ -75,32 +75,32 @@ plt.figure(figsize=(30, 8))
 plt.subplot(2, 2, 1)  # subplot com 2 linhas e 2 colunas, este é o primeiro gráfico
 plt.stem(df['Tempo'], df['ADC0_tensao'], 'g')
 plt.title('Tensão no Resistor 180 Ohms')
-plt.xlabel('Tempo')
-plt.ylabel('Valor')
+plt.xlabel('Tempo(milisegundos)')
+plt.ylabel('Valor(volts)')
 plt.grid(True)
 
 # Plotando ADC0_corrente
 plt.subplot(2, 2, 2)  # subplot com 2 linhas e 2 colunas, este é o segundo gráfico
 plt.stem(df['Tempo'], df['ADC0_corrente'], 'b')
 plt.title('Corrente no Resistor 180 Ohms')
-plt.xlabel('Tempo')
-plt.ylabel('Valor')
+plt.xlabel('Tempo(milisegundos)')
+plt.ylabel('Valor(Amperes)')
 plt.grid(True)
 
 # Plotando ADC1_tensao
 plt.subplot(2, 2, 3)  # subplot com 2 linhas e 2 colunas, este é o terceiro gráfico
 plt.stem(df['Tempo'], df['ADC1_tensao'], 'r')
 plt.title('Tensão na Carga')
-plt.xlabel('Tempo')
-plt.ylabel('Valor')
+plt.xlabel('Tempo(milisegundos)')
+plt.ylabel('Valor(volts)')
 plt.grid(True)
 
 # Plotando ADC1_corrente
 plt.subplot(2, 2, 4)  # subplot com 2 linhas e 2 colunas, este é o quarto gráfico
 plt.stem(df['Tempo'], df['ADC1_corrente'], 'm')
 plt.title('Corrente na Carga')
-plt.xlabel('Tempo')
-plt.ylabel('Valor')
+plt.xlabel('Tempo(milisegundos)')
+plt.ylabel('Valor(Amperes)')
 plt.grid(True)
 
 plt.tight_layout()  # garante um bom espaçamento entre os gráficos
