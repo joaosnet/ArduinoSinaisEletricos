@@ -89,13 +89,6 @@ Agradecemos às seguintes pessoas que contribuíram para este projeto:
         </sub>
       </a>
     </td>
-    <td align="center">
-      <a href="https://www.instagram.com/aly_lustoza/" title="QA Tester Analista de Mercado">
-        <img src="https://instagram.fbel1-1.fna.fbcdn.net/v/t51.2885-19/274501676_537691970910933_7250418063848294931_n.jpg?stp=dst-jpg_s150x150&_nc_ht=instagram.fbel1-1.fna.fbcdn.net&_nc_cat=109&_nc_ohc=KgbJtfViehAAX9mB9cR&edm=ACWDqb8BAAAA&ccb=7-5&oh=00_AfApyka_2lTirZVLEmvZec5PMm-mFW-SU1m3uIYbYDNZ5w&oe=65664ACE&_nc_sid=ee9879" width="100px;" alt="Foto do Alydson Lustoza"/><br>
-        <sub>
-          <b>Alydson Lustoza</b>
-        </sub>
-      </a>
         <td align="center">
       <a href="https://www.instagram.com/c.j_silva/" title="UX Designer Desenvolvedora Backend">
         <img src="https://instagram.fbel1-1.fna.fbcdn.net/v/t51.2885-19/361771304_833908247939807_9019221283482484802_n.jpg?stp=dst-jpg_s150x150&_nc_ht=instagram.fbel1-1.fna.fbcdn.net&_nc_cat=111&_nc_ohc=6VEjSCPRkm0AX-I87Do&edm=ACWDqb8BAAAA&ccb=7-5&oh=00_AfAZPuIQzYFL-7ojBTLjwU-cWWeeBRhDd_4y8QxFkIYUqw&oe=656549F2&_nc_sid=ee9879" width="100px;" alt="Foto da Carla Silva"/><br>
@@ -117,14 +110,6 @@ Agradecemos às seguintes pessoas que contribuíram para este projeto:
         <img src="https://media.licdn.com/dms/image/C5635AQF8PVFSmAHKyw/profile-framedphoto-shrink_400_400/0/1615418813549?e=1701450000&v=beta&t=HeCNpYmNhkZidKERm419sz3Kaat4mjW6anvc4VzlsR8" width="100px;" alt="Foto do José Soares"/><br>
         <sub>
           <b>Haroldo Magano</b>
-        </sub>
-      </a>
-    </td>
-<td align="center">
-      <a href="https://www.linkedin.com/in/hugo-barros-013833170/" title="UI Designer Especialista em Marketing">
-        <img src="https://media.licdn.com/dms/image/C5603AQFwkCvZP4Sszg/profile-displayphoto-shrink_200_200/0/1656009934326?e=1706140800&v=beta&t=rHW0AHp9_1MNLDjn0w9vKunl1nD3I5y3rp0mGYe_CSc" width="100px;" alt="Foto do José Soares"/><br>
-        <sub>
-          <b>Hugo Barros</b>
         </sub>
       </a>
     </td>
