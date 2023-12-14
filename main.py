@@ -7,7 +7,7 @@ com2 = serial.Serial()
 
 # %%
 # declarando as portas seriais
-com2.port = "COM2"
+com2.port = "COM7"
 
 com2.baudrate = 9600
 
@@ -19,7 +19,6 @@ taxa_amostragem = 1000  # 1 kHz
 # Tempo de espera para a estabilização do Arduino
 time.sleep(2)
 
-
 df = pd.DataFrame()
 
 com2.open()
@@ -29,10 +28,12 @@ contador = 0
 while True:
     com2.write('C'.encode())
     # formantando a string de leitura Canal: ADC0, Valor: 443
-    string = com2.readline().decode('utf-8')
+    byte_data = com2.readline()
+    print(byte_data)
+    string = byte_data.decode("uft-8")
     lista = string.split(', ')
-    # print(string)
-    # print(lista)
+    print(string)
+    print(lista)
 
     if len(lista) > 1 and ': ' in lista[1]:
         # print(lista[1].split(': ')[1])
