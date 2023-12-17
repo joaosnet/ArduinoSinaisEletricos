@@ -2,12 +2,12 @@
 import serial
 import time
 import pandas as pd
+from pprint import pprint as pp
 
 com2 = serial.Serial()
 
-# %%
 # declarando as portas seriais
-com2.port = "COM7"
+com2.port = "COM8"
 
 com2.baudrate = 9600
 
@@ -16,89 +16,93 @@ com2.timeout = 1
 # Configuração da taxa de amostragem
 taxa_amostragem = 1000  # 1 kHz
 
-# Tempo de espera para a estabilização do Arduino
-time.sleep(2)
-
 df = pd.DataFrame()
 
 com2.open()
 
+# Tempo de espera para a estabilização do Arduino
+time.sleep(5)
+
+# %%
 # inicializando um contador
 contador = 0
+
+# %%
 while True:
-    com2.write('C'.encode())
-    # formantando a string de leitura Canal: ADC0, Valor: 443
+    # formantando a string de leitura 443 | 123\r\n
     byte_data = com2.readline()
-    print(byte_data)
-    string = byte_data.decode("uft-8")
-    lista = string.split(', ')
-    print(string)
-    print(lista)
+    string = byte_data.decode()
+    # tirando os caracteres de quebra de linha
+    string = string.strip('\r\n')
+    lista = string.split(' | ')
+    # pp(lista)
 
-    if len(lista) > 1 and ': ' in lista[1]:
-        # print(lista[1].split(': ')[1])
-        tensao = float(lista[1].split(': ')[1])  # Convertendo a string para float Canal: ADC0, Valor: 443
-        # convertendo a tensao de 0-1023 para 0-5V
-        tensao = tensao * 5 / 1023
-        pino = lista[0].split(': ')[1]
-        if pino == 'ADC0':
-            corrente = tensao / 180
-        else:
-            corrente = tensao / 1000
-        # Formatando o tempo para milisegundos
-        tempo = time.time() * 1000
-            
-        if corrente is not None and tensao is not None:
-            print("Leitura de sinais da porta {}".format(pino))
-            print(f"Corrente: {corrente} A")
-            print(f"Tensão: {tensao} V") 
+    tempo = time.time() * 1000 
 
-        df = df._append({"Tempo": tempo, f"{pino}_tensao": tensao,  f"{pino}_corrente": corrente}, ignore_index=True)
-        contador += 1
-        if contador == 100:
-            break
-    else:
-        print("String não formatada corretamente")
+    # Convertendo os dados para float
+    tensao_a0 = float(lista[0])
+    tensao_a1 = float(lista[1])
 
+    # Convertendo os dados da escala 0-1023 para 0-5V
+    tensao_a0 = tensao_a0 * (5 / 1023)
+    tensao_a1 = tensao_a1 * (5 / 1023)
+
+    # Calculando a corrente
+    corrente_a0 = tensao_a0 / 180
+    corrente_a1 = tensao_a1 / 180
+
+    # Adicionando os dados ao dicionário
+    df = df._append({"Tempo": tempo, f"Tensão no Resistor 180 ohms": tensao_a0,  f"Corrente no Resistor 180 ohms": corrente_a0, f"Tensão na Carga": tensao_a1,  f"Corrente na Carga": corrente_a1}, ignore_index=True)
+
+    # se for um tempo especifico entao para o loop
+    if tempo > 10000:
+        break
+    
+    # Incrementando o contador
+    contador += 1
+    if contador == 10:
+        break
     # Para o loop por 1 / taxa_amostragem segundos
     time.sleep(1 / taxa_amostragem)
 
+# %%
 # Encerra o loop quando o usuário pressiona Ctrl+C
 com2.close()
 df.to_csv("amostras.csv")
-print(df)
+display(df)
 
+# %%
 import matplotlib.pyplot as plt
 
 plt.figure(figsize=(30, 8))
 
-# Plotando ADC0_tensao
+# Plotando a tensão no Resistor 180 Ohms
 plt.subplot(2, 2, 1)  # subplot com 2 linhas e 2 colunas, este é o primeiro gráfico
-plt.stem(df['Tempo'], df['ADC0_tensao'], 'g')
+plt.stem(df['Tempo'], df['Tensão no Resistor 180 ohms'], 'g')
 plt.title('Tensão no Resistor 180 Ohms')
 plt.xlabel('Tempo(milisegundos)')
 plt.ylabel('Valor(volts)')
 plt.grid(True)
 
-# Plotando ADC0_corrente
+# Plotando a corrente no Resistor 180 Ohms
 plt.subplot(2, 2, 2)  # subplot com 2 linhas e 2 colunas, este é o segundo gráfico
-plt.stem(df['Tempo'], df['ADC0_corrente'], 'b')
+plt.stem(df['Tempo'], df['Corrente no Resistor 180 ohms'], 'b')
 plt.title('Corrente no Resistor 180 Ohms')
 plt.xlabel('Tempo(milisegundos)')
 plt.ylabel('Valor(Amperes)')
 plt.grid(True)
 
-# Plotando ADC1_tensao
+# Plotando a tensão na Carga
 plt.subplot(2, 2, 3)  # subplot com 2 linhas e 2 colunas, este é o terceiro gráfico
-plt.stem(df['Tempo'], df['ADC1_tensao'], 'r')
+plt.stem(df['Tempo'], df['Tensão na Carga'], 'r')
 plt.title('Tensão na Carga')
 plt.xlabel('Tempo(milisegundos)')
 plt.ylabel('Valor(volts)')
 plt.grid(True)
 
-# Plotando ADC1_corrente
+# Plotando a corrente na Carga
 plt.subplot(2, 2, 4)  # subplot com 2 linhas e 2 colunas, este é o quarto gráfico
-plt.stem(df['Tempo'], df['ADC1_corrente'], 'm')
+plt.stem(df['Tempo'], df['Corrente na Carga'], 'm')
 plt.title('Corrente na Carga')
 plt.xlabel('Tempo(milisegundos)')
 plt.ylabel('Valor(Amperes)')
@@ -106,3 +110,5 @@ plt.grid(True)
 
 plt.tight_layout()  # garante um bom espaçamento entre os gráficos
 plt.show()
+
+
