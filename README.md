@@ -6,7 +6,7 @@
 ![Bitbucket open issues](https://img.shields.io/bitbucket/issues/joaosnet/ArduinoSinaisEletricos?style=for-the-badge)
 ![Bitbucket open pull requests](https://img.shields.io/bitbucket/pr-raw/joaosnet/ArduinoSinaisEletricos?style=for-the-badge)
 
-<img src="screenshots\ArduinoSinaisEletricos.bmp" alt="Projeto A4">
+<img src="screenshots\ArduinoSinaisEletricos.bmp" alt="Projeto Proteus">
 
  > Projeto de Aquisição e Análise de Sinais Elétricos com Arduino  Este repositório contém o código e a documentação para um projeto realizado no Laboratório de Processamento de Sinais (LaPS). O objetivo é realizar a aquisição e análise de sinais de corrente e tensão em um circuito elétrico, utilizando a plataforma Arduino. O projeto abrange a implementação de um sistema de aquisição, incluindo a definição da taxa de amostragem, resolução e a análise da qualidade de energia em diferentes condições operacionais.  
 
@@ -20,6 +20,10 @@
 
  # Sobre o Projeto 
  O projeto visa fornecer uma base para análise de qualidade de energia, permitindo avaliações objetivas em situações simuladas de surtos na rede elétrica. 
+
+<img src="screenshots\20231218_124734.jpg" alt="Materiais Utilizados">
+
+<img src="screenshots\plot.png" alt="Amostras no Gráfico">
 
 ## ☕ Usando o protótipo em python do Arduino Sinais Eletricos
 
@@ -89,31 +93,7 @@ Agradecemos às seguintes pessoas que contribuíram para este projeto:
         </sub>
       </a>
     </td>
-        <td align="center">
-      <a href="https://www.instagram.com/c.j_silva/" title="UX Designer Desenvolvedora Backend">
-        <img src="https://instagram.fbel1-1.fna.fbcdn.net/v/t51.2885-19/361771304_833908247939807_9019221283482484802_n.jpg?stp=dst-jpg_s150x150&_nc_ht=instagram.fbel1-1.fna.fbcdn.net&_nc_cat=111&_nc_ohc=6VEjSCPRkm0AX-I87Do&edm=ACWDqb8BAAAA&ccb=7-5&oh=00_AfAZPuIQzYFL-7ojBTLjwU-cWWeeBRhDd_4y8QxFkIYUqw&oe=656549F2&_nc_sid=ee9879" width="100px;" alt="Foto da Carla Silva"/><br>
-        <sub>
-          <b>Carla Silva</b>
-        </sub>
-      </a>
-    </td>
-    <td align="center">
-      <a href="https://www.instagram.com/tms.jpeg/" title="UI Designer Especialista em Marketing">
-        <img src="https://instagram.fbel1-1.fna.fbcdn.net/v/t51.2885-19/300225876_600418448208671_8750170704882872093_n.jpg?stp=dst-jpg_s150x150&_nc_ht=instagram.fbel1-1.fna.fbcdn.net&_nc_cat=111&_nc_ohc=zkwa2sgjdMYAX-g_-gi&edm=ACWDqb8BAAAA&ccb=7-5&oh=00_AfCdAENfZaw2HUE5i5Mj9XrHStvDv2d348cJUBAutNyrlg&oe=6566888B&_nc_sid=ee9879" width="100px;" alt="Foto do José Soares"/><br>
-        <sub>
-          <b>José Soares</b>
-        </sub>
-      </a>
-    </td>
-<td align="center">
-      <a href="https://www.linkedin.com/in/haroldo-magano-j%C3%BAnior-1a0b2265/" title="UI Designer Especialista em Marketing">
-        <img src="https://media.licdn.com/dms/image/C5635AQF8PVFSmAHKyw/profile-framedphoto-shrink_400_400/0/1615418813549?e=1701450000&v=beta&t=HeCNpYmNhkZidKERm419sz3Kaat4mjW6anvc4VzlsR8" width="100px;" alt="Foto do José Soares"/><br>
-        <sub>
-          <b>Haroldo Magano</b>
-        </sub>
-      </a>
-    </td>
-  </tr>
+
 </table>
 
 ## 😄 Seja um dos contribuidores
